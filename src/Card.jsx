@@ -1,11 +1,16 @@
-import React from "react";
 
-const Card = () => {
+function Card({profiles}) {
     return (
         <div>
-            holanda
+            {profiles.map((profile, index) => (
+                <div key={index}>
+                    <h2>{profile.nombre}</h2>
+                    <h2>{profile.mascota}</h2>
+                </div>
+            ))}
         </div>
     )
-};
+}
 
 export default Card;
+
